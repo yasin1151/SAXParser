@@ -1,5 +1,5 @@
-/*
-	author : yasin
+ï»¿/*
+	author : PengYao
 	time   : 2016/3/23
 	version: 1.0
 	ext    : myself utils lib
@@ -32,9 +32,9 @@ namespace yUtils
 
 
 	/*
-	*	@brief : ½«Ò»¸öÊı×ª»»³Éstring
-	*	@param : _value --- ĞèÒª×ª»»µÄÊı
-	*			 floatSaveDigits --- ĞèÒª±£´æµÄĞ¡ÊıÎ»Êı,Ä¬ÈÏÎª0
+	*	@brief : å°†ä¸€ä¸ªæ•°è½¬æ¢æˆstring
+	*	@param : _value --- éœ€è¦è½¬æ¢çš„æ•°
+	*			 floatSaveDigits --- éœ€è¦ä¿å­˜çš„å°æ•°ä½æ•°,é»˜è®¤ä¸º0
 	*/
 	template <typename T>
 	std::string toStr(T _value, int floatSaveDigits = 0)
@@ -64,7 +64,7 @@ namespace yUtils
 	}
 
 	/*
-		@brief : ÅĞ¶ÏÁ½¸ö¸¡µãĞÍÊÇ·ñÏàµÈ
+		@brief : åˆ¤æ–­ä¸¤ä¸ªæµ®ç‚¹å‹æ˜¯å¦ç›¸ç­‰
 	*/
 
 	inline bool IsEqualF(float lhs, float rhs)
@@ -77,7 +77,7 @@ namespace yUtils
 	}
 
 	/*
-		@brief : ÅĞ¶ÏÁ½¸ödoubleÊÇ·ñÏàµÈ
+		@brief : åˆ¤æ–­ä¸¤ä¸ªdoubleæ˜¯å¦ç›¸ç­‰
 	*/
 	inline bool IsEqualLF(double lhs, double rhs)
 	{
@@ -89,12 +89,12 @@ namespace yUtils
 	}
 
 	/*
-		@brief : »ñÈ¡Á½¸öµãµÄ½Ç¶È
+		@brief : è·å–ä¸¤ä¸ªç‚¹çš„è§’åº¦
 	*/
 #ifdef __COCOS2D_H__
 
 	/*
-		@brief : ½Ç¶È×ª»¡¶È
+		@brief : è§’åº¦è½¬å¼§åº¦
 	*/
 	static float Angle2Radian(float angle)
 	{
@@ -102,7 +102,7 @@ namespace yUtils
 	}
 
 	/*
-		@brief : »¡¶È×ª½Ç¶È
+		@brief : å¼§åº¦è½¬è§’åº¦
 	*/
 	static float Radian2Angle(float radian)
 	{
@@ -110,7 +110,7 @@ namespace yUtils
 	}
 
 	/*
-	@brief : »ñÈ¡Á½¸öµãÖ®¼äµÄ»¡¶È
+	@brief : è·å–ä¸¤ä¸ªç‚¹ä¹‹é—´çš„å¼§åº¦
 	*/
 	static float GetRadian(const cocos2d::Vec2& point1, const cocos2d::Vec2& point2)
 	{
@@ -122,7 +122,7 @@ namespace yUtils
 
 		float radian = acos(xDis / bevelEdge);
 
-		//Èç¹ûÔÚµÚËÄÏóÏŞ£¬ÔòÎª¸ºÊı
+		//å¦‚æœåœ¨ç¬¬å››è±¡é™ï¼Œåˆ™ä¸ºè´Ÿæ•°
 		if (point1.y < point2.y)
 		{
 			radian = -radian;
@@ -133,7 +133,7 @@ namespace yUtils
 
 
 	/*
-		@brief : »ñÈ¡Á½¸öµãÖ®¼äµÄ½Ç¶È
+		@brief : è·å–ä¸¤ä¸ªç‚¹ä¹‹é—´çš„è§’åº¦
 	*/
 	static float GetAngle(const cocos2d::Vec2& point1, const cocos2d::Vec2& point2)
 	{
@@ -142,14 +142,14 @@ namespace yUtils
 
 
 	/*
-		@brief : ½«vsµÄgbk±àÂë×ª»»³Éutf-8±àÂë£¬ÓÃÓÚlog
+		@brief : å°†vsçš„gbkç¼–ç è½¬æ¢æˆutf-8ç¼–ç ï¼Œç”¨äºlog
 	*/
 	static std::string GBK2UTF(const std::string& str)
 	{
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32)
 		std::wstring wszBuf = [=]()
 		{
-			//½«string×°»»³Éwstring
+			//å°†stringè£…æ¢æˆwstring
 			setlocale(LC_ALL, "chs");
 			const char* szSource = str.c_str();
 			size_t uSize = str.size() + 1;

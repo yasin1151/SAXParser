@@ -2,16 +2,19 @@
 #define _SAXParser_H_
 
 
-/*
-	基于cocos2dx的CCSAXParser和tinyxml2
-	被我从cocos2dx中抽离出来并进行了一些修改
-
+/**
+* name   : SAXExpParser.h
+* auther : PengYao
+* time	 : 2017/4/10
+* des    :  基于cocos2dx的CCSAXParser和tinyxml2
+*			被我从cocos2dx中抽离出来并进行了一些修改
+*			添加了中文注释
 */
+
 #include "tinyxml2.h"
 #include "yfile.h"
 #include <string>
 #include <vector>
-
 
 
 /*

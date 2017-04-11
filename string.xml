@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resourse>
-  <string name="first">
-    hello
-    <stringChild name="firstChild">hello</stringChild>
-    world
-  </string>
+  <string name="first">hello<stringChild name="firstChild">child</stringChild>world</string>
   <string name="second">hey</string>
 </resourse>

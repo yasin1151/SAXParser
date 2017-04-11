@@ -1,4 +1,4 @@
-#include "SAXParser.h"
+﻿#include "SAXParser.h"
 
 bool XmlSaxHander::VisitEnter(const tinyxml2::XMLElement& element, const tinyxml2::XMLAttribute* firstAttribute)
 {
