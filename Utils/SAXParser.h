@@ -9,7 +9,6 @@
 */
 #include "tinyxml2.h"
 #include "yfile.h"
-#include "tinyxml2.h"
 #include <string>
 #include <vector>
 

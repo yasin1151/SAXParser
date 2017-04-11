@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resourse>
-  <string name="first">你
+  <string name="first">
+    hello
     <stringChild name="firstChild">hello</stringChild>
-  好</string>
-  <string name="second">世界</string>
+    world
+  </string>
+  <string name="second">hey</string>
 </resourse>

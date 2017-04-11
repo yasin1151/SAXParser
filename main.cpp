@@ -1,12 +1,17 @@
 #include <iostream>
 using namespace std;
 
-#include "MyParser.h"
+#include "example\SAXExpParser.h"
 
 int main()
 {
-	MyParser parser;
+	SAXExpParser parser;
 	parser.parse("string.xml");
 
+	cout << endl << "name set: " << endl;
+	for (int i = 0; i < parser.getSize(); i++)
+	{
+		cout << "name " << i + 1 << " = " << parser[i] << endl;
+	}
 	return 0;
 }
